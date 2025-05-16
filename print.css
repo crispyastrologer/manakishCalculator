@@ -1,0 +1,192 @@
+/* Print-specific styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .no-print, .screen-only {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  /* Print Header */
+  .print-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e94e4e;
+    padding-bottom: 10px;
+  }
+  
+  .print-header h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32pt;
+    color: #e94e4e;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .print-subtitle {
+    font-family: "Cairo", sans-serif;
+    font-size: 24pt;
+    color: #e94e4e;
+    margin-top: 5px;
+  }
+  
+  /* Recipe sections */
+  #print-dough-section,
+  #print-toppings-section,
+  #print-summary-section {
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+  }
+  
+  #print-dough-section h2,
+  #print-toppings-section h2,
+  #print-summary-section h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18pt;
+    color: #e94e4e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  #print-zaatar-section h3,
+  #print-cheese-section h3,
+  #print-meat-section h3,
+  #print-banana-section h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16pt;
+    color: #e94e4e;
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+  
+  /* Recipe tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  .total-row {
+    font-weight: bold;
+  }
+  
+  /* Recipe notes */
+  #print-dough-notes,
+  #print-recipe-details,
+  #print-zaatar-details,
+  #print-cheese-details,
+  #print-meat-details,
+  #print-banana-details {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  /* Print footer */
+  .print-footer {
+    margin-top: 30px;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  /* Avoid page breaks inside important elements */
+  table, tr, .print-header, .print-footer {
+    page-break-inside: avoid;
+  }
+  
+  /* Page breaks */
+  #print-toppings-section {
+    page-break-before: always;
+  }
+  
+  #print-summary-section {
+    page-break-before: always;
+  }
+  
+  /* Summary Table */
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+  
+  .summary-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .summary-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .summary-table .category-row {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+  
+  .summary-table .total-row {
+    font-weight: bold;
+    background-color: #f5f5f5;
+  }
+  
+  /* BOQ Section */
+  #print-boq-section {
+    page-break-before: always;
+  }
+  
+  #print-boq-section h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18pt;
+    color: #e94e4e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  /* Links */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Hide price information when printing, unless explicitly shown */
+  .price-column, .price-input, .price-display {
+    display: none;
+  }
+  
+  .show-prices .price-column,
+  .show-prices .price-display {
+    display: table-cell;
+  }
+}
